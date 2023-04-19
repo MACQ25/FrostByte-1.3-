@@ -1,0 +1,5 @@
+# Ignore all .iml files:
+
+# Comprehensive list of ignores: https://github.com/github/gitignore
+
+*.iml
