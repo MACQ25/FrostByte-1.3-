@@ -85,9 +85,8 @@ public class Main extends Application {
      * @param newFile string URL referencing the music file.
      */
     public void changeMusic(String newFile){
-        musicFile = newFile;
-        sound = new Media(new File(musicFile).toURI().toString());
-        mediaPlayer = new MediaPlayer(sound);
+        musicFile = "resources/musicTrack/" + newFile;
+        mediaPlayer = new MediaPlayer(new Media(getClass().getResource(musicFile).toExternalForm()));
         mediaPlayer.play();
         mediaPlayer.setCycleCount(AudioClip.INDEFINITE);
         muhMediaVi = new MediaView(mediaPlayer);
